@@ -1,4 +1,4 @@
-## Klonen Repositories
+## Klonen des Repositories
 
 Als erstes muss man eine Fork auf meinen Github Akkount erstellt. 
 ![**Wieso geht das nicht!!!**](images/fork_SSH-key.png)
