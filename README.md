@@ -1,48 +1,19 @@
-# **Thema:** Erstellen einer ToDo-Applikation mit Markdown, Git, GitHub und Docker
+## Klonen Repositories
 
-In dieser Abschlussaufgabe werden alle erlernten Fähigkeiten in den Bereichen **Markdown**, **Git**, **GitHub** und **Docker** kombiniert. Die Aufgabe besteht darin, eine ToDo-Applikation zu erstellen und diese in einem Docker-Container bereitzustellen.
+Als erstes muss man eine Fork auf meinen Github Akkount erstellt. 
+![**Wieso geht das nicht!!!**](images/fork_SSH-key.png)
+Danach muss man in den gewünschten Ordner navigieren. Das macht man mit dem Befehl cd und dem Ordnernamen (siehe unten). Um das Repositories zu Klonen brauch man den SSH key den man in Git hub unter «Code» bekommt und dort kopieren kann.
 
-### **Aufgabenstellung:**
+![**Wieso geht das nicht!!!**](images/Code_clone.png)
 
-1. **GitHub-Fork erstellen:**
-   - Erstelle einen **Fork** des folgenden GitHub-Repositories: [docker-nodejs-sample](https://github.com/ICT-BLJ/docker-nodejs-sample).
-   - Clone deinen Fork lokal auf deinen Computer.
+## Installation der notwendigen Pakete
+Bevor man ein Paket installiert, sollte die Authentifizierung bei GitHub Packages gemäss den Anweisungen eingerichtet sein. Verwende dafür ein persönliches Zugriffstoken (klassisch) mit GITHUB_TOKEN, um Pakete zu veröffentlichen, und die Berechtigung read:Packages, um Pakete aus anderen privaten Repositories zu installieren. Wichtig ist, dass die Anweisungen des verwendeten Paketclients genau beachtet werden, um eine fehlerfreie Installation zu gewährleisten.
 
-2. **Erstellen einer README-Datei in Markdown:**
-   - Erstelle eine **README.md** Datei im Root-Verzeichnis des Projekts.
-   - Die README soll alle Schritte zur **Installation des Projekts** enthalten. Dazu gehören:
-     - Klonen des Repositories
-     - Installation der notwendigen Pakete
-     - Docker-Konfiguration und -Installation
-     - Starten der Applikation in einem Docker-Container
-   - Nutze [Markdown](https://www.markdownguide.org/cheat-sheet/) für die Struktur und Formatierung der Datei.
+## Docker-Konfiguration und -Installation
+Um Docker Desktop auf Windows zu installieren, lädt man den Installer von der Docker-Website herunter. Bei der Installation muss man WSL 2 benutzen. Für die Installation brauch man Windows 10 oder 11 in der 64-Bit-Version, wobei mindestens 4 GB RAM und eine 64-Bit-CPU mit SLAT benötigt werden. Man aktiviert die WSL 2-Funktion in den Windows-Einstellungen, bevor man Docker installiert. Nach dem Herunterladen des Installers doppelklicke man darauf und folge den Anweisungen im Installationsassistenten. Nach der Installation kann man Docker Desktop starten und die Nutzungsbedingungen akzeptieren, um das Programm zu verwenden.
 
-3. **Dokumentation der Vorgehensweise:**
-   - Verfasse eine vollständige **Dokumentation in Word**, in der die Arbeitsschritte beschrieben werden. Diese Schritte sind:
-     - Klonen des Repositories
-     - Einrichtung der Entwicklungsumgebung
-     - Erstellung der README.md
-     - Verwendung von Git (Commit, Push)
-     - Erstellung und Nutzung von Docker-Containern
-   - Verwende die während des Office-Kurses erarbeiteten Kenntnisse für das Erstellen dieses Dokuments.
+## Starten der Applikation in einem Docker-Container
 
-4. **Dockerize das Node.js-Projekt:**
-   - Verfolge die Anleitung unter [docs.docker.com](https://docs.docker.com/guides/language/nodejs/containerize/) ab dem Schritt **"Initialize Docker inits"**.
-   - Dein Ziel ist es, das Projekt in einem Docker-Container lauffähig zu machen, sodass am Ende eine **ToDo-Applikation** in einem Docker-Container bereitsteht.
-
-5. **Git-Workflows:**
-   - Arbeite mit **Git**, um Änderungen regelmäßig zu committen und auf GitHub zu pushen.
-   - Verwende sinnvolle Commit-Nachrichten, um deinen Fortschritt zu dokumentieren.
-   - Stelle sicher, dass dein finaler Stand auf GitHub vorhanden ist.
-
-6. **Abgabe:**
-   - **Dokumentation:** Lade die erstellte Word-Dokumentation (inkl. Screenshots und Beschreibung der Schritte) in dein Repository hoch.
-   - **GitHub-Link:** Stelle den Link zu deinem GitHub-Repository bereit, das den finalen Stand des Projekts enthält.
-
-### **Ziele der Aufgabe:**
-- Anwendung und Vertiefung von Git und GitHub.
-- Verfassen einer strukturierten Anleitung mit Markdown.
-- Containerisieren einer Node.js-Anwendung mit Docker.
-- Dokumentation des gesamten Prozesses in einem Word-Dokument.
-  
-Viel Erfolg bei der Umsetzung!
+Um die Applikation in einem Docker Container zu starten muss man ins ins Terminal gehen. Dort navigiert man mit cd zu dem gewünschten Ordner. Danach gibt man "docker init" ein. Dadurch wird einem einige Fragen über die Einstllungen des Containers gestellt die man beantworten muss um den Container zu konfigurieren.
+![**Wieso geht das nicht!!!**](images/Code_container.png)
+Danach kann man in einem Browser "localhost:" + die Portnummer.
